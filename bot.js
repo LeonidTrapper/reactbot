@@ -18,7 +18,7 @@ bot.on(`message`, async (message) => {
 		return;
 	} else {
 		if(message.content != `jdckermgiorefjerТТЫЛОХБЛЯТЬiojgriovjrwo33`) {
-			const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'ok');
+			const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'okee');
 			message.react(emoji);
 		}
 	}
