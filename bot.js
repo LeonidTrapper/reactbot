@@ -51,15 +51,12 @@ if(message.channel.id === "596039765309259843") {
 } else {
 
 if (message.content.includes("https://")) {
-    console.log("deleted " + message.content + " from " + message.author)
     message.delete().then(() => bot.channels.cache.get("706201787056783410").send(fuzzi))
   }
   if (message.content.includes("http://")) {
-    message.delete();
     message.delete().then(() => bot.channels.cache.get("706201787056783410").send(fuzzi))
   }
   if (message.content.includes("www.")) {
-    message.delete();
     message.delete().then(() => bot.channels.cache.get("706201787056783410").send(fuzzi))
   }
 
