@@ -15,3 +15,8 @@ bot.on(`message`, async (message) => {
 		}
 	}
 })
+
+bot.on(`ready`, async (ready) => {
+	bot.user.setStatus(`dnd`);
+	bot.user.setActivity(`за фоточками | Префикс: ${prefix}`, { type: 'WATCHING' });
+})
