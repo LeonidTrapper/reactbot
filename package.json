@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leonid",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonidTrapper/reactbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LeonidTrapper/reactbot/issues"
+  },
+  "homepage": "https://github.com/LeonidTrapper/reactbot#readme"
 }
