@@ -18,7 +18,8 @@ bot.on(`message`, async (message) => {
 		return;
 	} else {
 		if(message.content != `jdckermgiorefjerТТЫЛОХБЛЯТЬiojgriovjrwo33`) {
-			message.react(`:ok~1:`).catch(err => { console.log(`React|`,`Не удалось выдать реакцию`) })
+			const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'ok');
+			message.react(emoji);
 		}
 	}
 })
