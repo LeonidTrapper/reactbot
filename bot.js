@@ -7,11 +7,18 @@ const prefix = cfg.prefix;
 bot.login(process.env.token).then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
 
 bot.on(`message`, async (message) => {
-	if(message.channel.id != `681057983391989772`) {
+	if(message.channel.id != `596047967933169727`) {
 		return;
 	} else {
 		if(message.content != `jdckermgiorefjerТТЫЛОХБЛЯТЬiojgriovjrwo33`) {
 			message.react(`🔥`).catch(err => { console.log(`React|`,`Не удалось выдать реакцию`) })
+		}
+	}
+	if(message.channel.id != `681057983391989772`) {
+		return;
+	} else {
+		if(message.content != `jdckermgiorefjerТТЫЛОХБЛЯТЬiojgriovjrwo33`) {
+			message.react(`:ok~1:`).catch(err => { console.log(`React|`,`Не удалось выдать реакцию`) })
 		}
 	}
 })
