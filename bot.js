@@ -14,7 +14,9 @@ bot.on(`message`, async (message) => {
 			message.react(`🔥`).catch(err => { console.log(`React|`,`Не удалось выдать реакцию`) })
 		}
 	}
-	
+})
+
+bot.on(`message`, async (message) => {
 	if(message.channel.id === `681057983391989772`) {
 		const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'okee');
 		message.react(emoji);
