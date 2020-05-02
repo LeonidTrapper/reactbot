@@ -4,7 +4,7 @@ const cfg = require(`./config.json`);
 const token = cfg.token;
 const prefix = cfg.prefix;
 
-bot.login("NTcyMTQxMTMzMjM3NDUyODMz.Xq22wg.d5kraTY7ko-ScWDV-iEI_8vZvTs").then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
+bot.login(process.env.token).then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
 
 
 
