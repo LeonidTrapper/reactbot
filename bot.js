@@ -36,7 +36,7 @@ bot.on(`message`, async (message) => {
 
 bot.on(`message`, async (message) => {
 
-let fuzzi = new Discord.RichEmbed()
+let fuzzi = new Discord.MessageEmbed()
 		.setDescription("Анти реклама")
 		.setColor(`#ff9500`)
 		.setThumbnail(`https://sun9-58.userapi.com/c629401/v629401855/3d4fa/WbDpLYB_6HQ.jpg`)
@@ -69,11 +69,11 @@ if (message.content.includes("https://")) {
 
 	// !ping
 	if(message.content.startsWith(`${prefix}ping`)) {
-			let fuz = new Discord.RichEmbed()
+			let fuz = new Discord.MessageEmbed()
 			.setColor(`#f00a0a`)
 			.addField("⏳", `Ожидайте...`)
 		const m = await message.channel.send(fuz);
-		let fuzz = new Discord.RichEmbed()
+		let fuzz = new Discord.MessageEmbed()
 		.setColor(`#1996e3`)
 		.addField("⏳", m.createdTimestamp - message.createdTimestamp + ` ms`)
    		 m.edit(fuzz)
