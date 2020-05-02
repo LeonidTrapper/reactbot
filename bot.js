@@ -18,7 +18,7 @@ bot.on(`message`, async (message) => {
 
 bot.on(`message`, async (message) => {
 	if(message.channel.id === `681057983391989772`) {
-		const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'okee');
+		const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'ZPepeSad');
 		message.react(emoji);
 	}
 })
