@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg = require(`./sys/config.json`);
-const color = require('colors');
+const cfg = require(`./config.json`);
 const token = cfg.token;
 const prefix = cfg.prefix;
 
