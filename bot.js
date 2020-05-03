@@ -5,6 +5,8 @@ const fs         = require("fs");
 bot.commands     = new Discord.Collection();
 const token 	 = cfg.token;
 const prefix 	 = cfg.prefix;
+const akaneko 	 = require('akaneko');
+
 
 bot.login(process.env.token).then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
 
@@ -79,11 +81,12 @@ bot.on(`message`, async (message) => {
 bot.on(`message`, async (message) => {
 
 let fuzzi = new Discord.MessageEmbed()
-		.setDescription("Анти реклама")
 		.setColor(`#ff9500`)
-		.setThumbnail(`https://sun9-58.userapi.com/c629401/v629401855/3d4fa/WbDpLYB_6HQ.jpg`)
+		.setAuthor(`Анти реклама`, bot.user.avatarURL())
+		.setThumbnail(message.author.avatarURL())
 		.addField("Отправитель:", message.author.tag)
 		.addField("Удалённое сообщение:", message.content)
+		.setTimestamp()
 		.setFooter(`Leonid.bot`)
 
 
@@ -107,15 +110,15 @@ if (message.content.includes("https://")) {
 
 
 	// !ping
-	if(message.content.startsWith(`${prefix}ping`)) {
+	if(message.content.includes(`${prefix}ping`)) {
 			let fuz = new Discord.MessageEmbed()
 			.setColor(`#f00a0a`)
 			.addField("⏳", `Ожидайте...`)
-		const m = await message.channel.send(fuz);
+		const m = await message.channel.send(fuz).catch(err => {})
 		let fuzz = new Discord.MessageEmbed()
 		.setColor(`#1996e3`)
 		.addField("⏳", m.createdTimestamp - message.createdTimestamp + ` ms`)
-   		 m.edit(fuzz)
+   		 m.edit(fuzz).catch(err => {})
   }
 })
 
@@ -124,6 +127,5 @@ if (message.content.includes("https://")) {
 
 
 bot.on(`ready`, async (ready) => {
-	bot.user.setStatus(`dnd`);
 	bot.user.setActivity(`за фоточками | Префикс: ${prefix}`, { type: 'WATCHING' });
 })
