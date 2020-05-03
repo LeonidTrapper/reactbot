@@ -1,4 +1,4 @@
+npm install akaneko
 npm install discord.js
 npm i fs
 npm i random-puppy
-npm install akaneko
