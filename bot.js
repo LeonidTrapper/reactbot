@@ -56,14 +56,6 @@ if(commandfile) commandfile.run(bot,message,args);
 // Хуйня
 bot.on(`message`, async (message) => {
 
-	// Отключает каналы
-
-	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
-		return;
-	}
-
-
-
 	// Ставит реакцию в аестетик
 	if(message.channel.id === `596047655336017921`) {
 		const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'd_');
@@ -88,6 +80,13 @@ bot.on(`message`, async (message) => {
 
 
 bot.on(`message`, async (message) => {
+
+
+	// Отключает каналы
+
+	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
+		return;
+	} else {
 
 let fuzzi = new Discord.MessageEmbed()
 		.setColor(`#ff9500`)
@@ -129,6 +128,8 @@ if (message.content.includes("https://")) {
 		.addField("⏳", m.createdTimestamp - message.createdTimestamp + ` ms`)
    		 m.edit(fuzz).catch(err => {})
   }
+
+}
 })
 
 
