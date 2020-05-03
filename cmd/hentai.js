@@ -6,6 +6,11 @@ module.exports = {
 	category: `fun`,
 	description: `Отправляет какую-то хуйню`,
 	run: async (client, message, args) => {
+			// Отключает каналы
+
+	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
+		return;
+	} else {
 		
 		const rando = 
 		[
@@ -24,6 +29,7 @@ module.exports = {
 		.setFooter(`Leonid.bot`)
 
 		message.channel.send(embed).cath(err => {})
+	}
 	}
 }
 

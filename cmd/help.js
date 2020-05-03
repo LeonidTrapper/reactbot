@@ -8,6 +8,11 @@ if(message.channel.type === "dm") {
 	return;
 } 
 
+	// Отключает каналы
+
+	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
+		return;
+	} else {
 
 let botembed = new Discord.MessageEmbed()
 .setDescription("Help")
@@ -21,7 +26,7 @@ let botembed = new Discord.MessageEmbed()
 
 return message.channel.send(botembed).cath(err => {})
 
-
+}
 }
 
 module.exports.help = {
