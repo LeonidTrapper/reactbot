@@ -1,1 +1,3 @@
 npm install discord.js
+npm i fs
+npm i random-puppy
