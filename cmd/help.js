@@ -15,14 +15,17 @@ if(message.channel.type === "dm") {
 	} else {
 
 let botembed = new Discord.MessageEmbed()
-.setDescription("Help")
+.setAuthor(`Help`, `https://sun9-25.userapi.com/-VvxjFnnUMmCUqwhMMzYR1vaRM6fPWS-pQB4aA/7UmzbpSKUiE.jpg`)
 .setColor(`#f79525`)
 .setThumbnail(`https://sun9-62.userapi.com/u-ScTG02JlqgjTVKr40PlFQ-f8tF85EmRu6jMw/jV1mlnR4kxE.jpg`)
 .addField("Основные команды:", `${prefix}help помощь по командам\n${prefix}ping - пинг`)
 .addField("Развлечения:", `${prefix}meme - рандомный мемчик\n${prefix}car - рандомный автомобиль\n${prefix}ast - аестетичная фоточка\n${prefix}neko - рандомная пикча с неко`)
 .addField("NSFW:", `${prefix}hentai - рандомная пикча с хентаем`)
-.setImage()
-.setFooter(`Leonid.bot`, `https://i.pinimg.com/originals/8e/fb/ae/8efbae871f6792ba76d7ae3b6e422408.jpg`)
+.addFields(
+{name: `Задать вопрос:`, value: `Leonid#9085`, inline: true},
+{name: `Страница создателя:`, value: `https://vk.com/leonidtrapper`, inline: true},
+)
+.setFooter(message.author.username, message.author.avatarURL())
 
 return message.channel.send(botembed).cath(err => {})
 
