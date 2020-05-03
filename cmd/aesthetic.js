@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const randomPuppy = require(`random-puppy`);
 
 module.exports = {
-	name: `meme`,
+	name: `ast`,
 	category: `fun`,
 	description: `Отправляет какую-то хуйню`,
 	run: async (client, message, args) => {
-		const subReddits = ["Pikabu"];
+		const subReddits = ["aesthetic"];
 		const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
 		const img = await randomPuppy(random);
@@ -14,7 +14,7 @@ module.exports = {
 		
 		let embed = new Discord.MessageEmbed()
 		.setTitle(`Прямиком из /r/${random}`)
-		.setColor(`#31b32e`)
+		.setColor(`#fc869c`)
 		.setImage(img)
 		.setURL(`https://reddit.com/r/${random}`)
 		.setFooter(`Leonid.bot`)
@@ -24,5 +24,5 @@ module.exports = {
 }
 
 module.exports.help = {
-    name: "meme"
+    name: "ast"
 }
