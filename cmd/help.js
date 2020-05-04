@@ -1,3 +1,4 @@
+'use strict';
 const Discord = require('discord.js');
 const cfg = require(`../config.json`);
 let prefix = cfg.prefix;
