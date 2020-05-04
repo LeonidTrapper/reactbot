@@ -10,7 +10,7 @@ const prefix 	 = cfg.prefix;
 const akaneko 	 = require('akaneko');
 
 
-bot.login("NTcyMTQxMTMzMjM3NDUyODMz.Xq8YOw.ljQm28w5cJr-WGyPEf9JRFwPsGI").then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
+bot.login(process.env.token).then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
 
 
 
