@@ -1,3 +1,5 @@
+'use strict';
+
 const Discord 	 = require('discord.js');
 const bot		 = new Discord.Client();
 const cfg 		 = require(`./config.json`);
@@ -8,7 +10,7 @@ const prefix 	 = cfg.prefix;
 const akaneko 	 = require('akaneko');
 
 
-bot.login(process.env.token).then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
+bot.login("NTcyMTQxMTMzMjM3NDUyODMz.Xq8YOw.ljQm28w5cJr-WGyPEf9JRFwPsGI").then(() => console.log(`Login|`,`Бот активен\nТег бота: ${bot.user.tag}`)).catch(err => { console.log(`Login|`,`Произошла ошибка. Напиши мне в лс Leonid#9085`), console.log(err) })
 
 
 
@@ -44,7 +46,7 @@ if(commandfile) commandfile.run(bot,message,args);
 });
 
 
-//////////////////////////////////////  Не трогай  ////////////////////////////////////////////
+//////////////////////////////////////  ---------  ////////////////////////////////////////////
 
 
 
