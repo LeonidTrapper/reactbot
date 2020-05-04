@@ -53,8 +53,6 @@ if(commandfile) commandfile.run(bot,message,args);
 
 
 
-
-
 // Хуйня
 bot.on(`message`, async (message) => {
 
