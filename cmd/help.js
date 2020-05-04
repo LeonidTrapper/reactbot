@@ -5,6 +5,9 @@ let prefix = cfg.prefix;
 
 module.exports.run = async (bot, message, args) => {
 
+	const eclr = require(`../di4/colors.json`)
+	const random = eclr[Math.floor(Math.random() * eclr.length)];
+
 if(message.channel.type === "dm") {
 	return;
 } 
@@ -17,12 +20,12 @@ if(message.channel.type === "dm") {
 
 let botembed = new Discord.MessageEmbed()
 .setAuthor(`Help`, `https://sun9-25.userapi.com/-VvxjFnnUMmCUqwhMMzYR1vaRM6fPWS-pQB4aA/7UmzbpSKUiE.jpg`)
-.setColor(`#f79525`)
+.setColor(random)
 .setThumbnail(`https://sun9-62.userapi.com/u-ScTG02JlqgjTVKr40PlFQ-f8tF85EmRu6jMw/jV1mlnR4kxE.jpg`)
 .addField("Основные команды:", `${prefix}help помощь по командам\n${prefix}ping - пинг`)
 .addField("Развлечения:", `${prefix}meme - рандомный мемчик\n${prefix}car - рандомный автомобиль\n${prefix}ast - аестетичная фоточка\n${prefix}gif - рандомная гифка ( ENG )`)
 .addField(`Арты:`, `${prefix}neko - рандомная пикча с неко\n${prefix}anime - рандомный аниме арт ( тестирование команды )\n${prefix}jojo - рандомная пикча по Джо Джо`)
-.addField("NSFW:", `${prefix}hentai - рандомная пикча с хентаем`)
+.addField("NSFW:", `${prefix}hentai - рандомная пикча с хентаем\n${prefix}erotic - рандомная эротическая фоточка ( в доработке )`)
 .addFields(
 {name: `Задать вопрос:`, value: `Leonid#9085`, inline: true},
 {name: `Страница создателя:`, value: `https://vk.com/leonidtrapper`, inline: true},
