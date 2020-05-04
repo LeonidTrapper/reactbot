@@ -18,13 +18,13 @@ module.exports = {
 
 		
 		let embed = new Discord.MessageEmbed()
-		.setTitle(`Прямиком из /r/${random}`)
+		.setTitle(`/r/${random}`)
 		.setColor(`#6626f0`)
 		.setImage(img)
 		.setURL(`https://reddit.com/r/${random}`)
 		.setFooter(`Leonid.bot`)
 
-		message.channel.send(embed).cath(err => {})
+		message.channel.send(embed).catch(err => {})
 	}
 	}
 }

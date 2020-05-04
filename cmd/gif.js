@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const akaneko = require('akaneko');
+const randomPuppy = require(`random-puppy`);
 
 module.exports = {
-	name: `hentai`,
+	name: `gif`,
 	category: `fun`,
 	description: `Отправляет какую-то хуйню`,
 	run: async (client, message, args) => {
@@ -11,21 +11,17 @@ module.exports = {
 	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
 		return;
 	} else {
-		
-		const rando = 
-		[
-			akaneko.nsfw.ass(),
-			akaneko.nsfw.bdsm(),
-			akaneko.nsfw.cum(),
-			akaneko.nsfw.doujin(),
-			akaneko.nsfw.hentai(),
-			akaneko.lewdNeko(),
-		]
+		const subReddits = ["gif"];
+		const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+
+		const img = await randomPuppy(random);
 
 		
 		let embed = new Discord.MessageEmbed()
-		.setColor(`#e8002b`)
-		.setImage(rando[Math.floor(Math.random() * rando.length)])
+		.setTitle(`/r/${random}`)
+		.setColor(`#fc869c`)
+		.setImage(img)
+		.setURL(`https://reddit.com/r/${random}`)
 		.setFooter(`Leonid.bot`)
 
 		message.channel.send(embed).catch(err => {})
@@ -34,5 +30,5 @@ module.exports = {
 }
 
 module.exports.help = {
-    name: "hentai"
+    name: "gif"
 }

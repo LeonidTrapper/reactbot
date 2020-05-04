@@ -19,7 +19,8 @@ let botembed = new Discord.MessageEmbed()
 .setColor(`#f79525`)
 .setThumbnail(`https://sun9-62.userapi.com/u-ScTG02JlqgjTVKr40PlFQ-f8tF85EmRu6jMw/jV1mlnR4kxE.jpg`)
 .addField("Основные команды:", `${prefix}help помощь по командам\n${prefix}ping - пинг`)
-.addField("Развлечения:", `${prefix}meme - рандомный мемчик\n${prefix}car - рандомный автомобиль\n${prefix}ast - аестетичная фоточка\n${prefix}neko - рандомная пикча с неко`)
+.addField("Развлечения:", `${prefix}meme - рандомный мемчик\n${prefix}car - рандомный автомобиль\n${prefix}ast - аестетичная фоточка\n${prefix}gif - рандомная гифка ( ENG )`)
+.addField(`Арты:`, `${prefix}neko - рандомная пикча с неко\n${prefix}anime - рандомный аниме арт ( тестирование команды )\n${prefix}jojo - рандомная пикча по Джо Джо`)
 .addField("NSFW:", `${prefix}hentai - рандомная пикча с хентаем`)
 .addFields(
 {name: `Задать вопрос:`, value: `Leonid#9085`, inline: true},
@@ -27,7 +28,7 @@ let botembed = new Discord.MessageEmbed()
 )
 .setFooter(message.author.username, message.author.avatarURL())
 
-return message.channel.send(botembed).cath(err => {})
+return message.channel.send(botembed).catch(err => {})
 
 }
 }
