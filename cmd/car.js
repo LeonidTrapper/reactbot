@@ -12,7 +12,7 @@ module.exports = {
 	if(message.channel.id === `596047655336017921` || message.channel.id === `596047747765895223` || message.channel.id === `596047967933169727`) {
 		return;
 	} else {
-		const subReddits = ["Shitty_Car_Mods", "carporn"];
+		const subReddits = ["Shitty_Car_Mods", "carporn", "classiccars"];
 		const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
 		const img = await randomPuppy(random);
