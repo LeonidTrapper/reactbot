@@ -77,7 +77,9 @@ bot.on(`message`, async (message) => {
 	}
 })
 
-
+bot.on('guildMemberAdd', (guildMember) => {
+   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "⭐ꜱᴛᴀʀ⭐")).catch(err => {})
+}
 
 bot.on(`message`, async (message) => {
 
