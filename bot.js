@@ -99,6 +99,9 @@ let fuzzi = new Discord.MessageEmbed()
 
 
 // Анти реклама
+if(message.author.hasPermission("ADMINISTRATOR") {
+return;
+} else {
 if(message.channel.id === "596039765309259843") {
 	return;
 } else {
@@ -113,6 +116,7 @@ if (message.content.includes("https://")) {
     message.delete().then(() => bot.channels.cache.get("706201787056783410").send(fuzzi))
   }
 
+}
 }
 //
 
