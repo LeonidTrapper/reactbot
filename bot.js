@@ -117,7 +117,7 @@ if (message.content.includes("https://")) {
   }
 
 }
-}
+})
 //
 
 
