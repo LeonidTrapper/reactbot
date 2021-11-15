@@ -28,7 +28,7 @@ let botembed = new Discord.MessageEmbed()
 .addField("NSFW:", `${prefix}hentai - рандомная пикча с хентаем\n${prefix}erotic - рандомная эротическая фоточка ( в доработке )`)
 .addFields(
 {name: `Задать вопрос:`, value: `Leonid#9085`, inline: true},
-{name: `Страница создателя:`, value: `https://vk.com/leonidtrapper`, inline: true},
+{name: `Last upd.:`, value: `12.05.2020`, inline: true},
 )
 .setFooter(message.author.username, message.author.avatarURL())
 
